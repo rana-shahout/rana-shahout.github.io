@@ -1,0 +1,21 @@
+/* Rana's custom website styling */
+
+/* Make profile photo smaller */
+.profile {
+  width: 22% !important;
+}
+
+.profile img {
+  width: 100% !important;
+  max-width: 230px !important;
+  height: auto !important;
+}
+
+/* Make first and last name have the same weight */
+.post-title {
+  font-weight: 400 !important;
+}
+
+.post-title strong {
+  font-weight: 400 !important;
+}
