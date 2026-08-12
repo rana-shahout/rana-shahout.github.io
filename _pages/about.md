@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoctoral Researcher at MIT.
+subtitle:
 
 profile:
   align: left
