@@ -6,7 +6,7 @@ subtitle: Postdoctoral Researcher at MIT.
 
 profile:
   align: left
-  image: prof_pic.jpg
+  image: rana.jpg
   image_circular: false # crops the image to make it circular
   more_info:
 
