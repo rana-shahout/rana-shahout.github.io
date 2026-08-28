@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-24'
+  last_updated: '2026-08-28'
 papers:
   M0EIKRoAAAAJ:0EnyYjriUFMC:
     citations: 0
@@ -22,7 +22,7 @@ papers:
     title: Intra-request branch orchestration for efficient LLM reasoning
     year: '2025'
   M0EIKRoAAAAJ:5nxA0vEk-isC:
-    citations: 72
+    citations: 76
     title: 'Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing.'
     year: '2025'
   M0EIKRoAAAAJ:9yKSN-GCB0IC:
@@ -62,7 +62,7 @@ papers:
     title: 'Evendb: optimizing key-value storage for spatial locality'
     year: '2020'
   M0EIKRoAAAAJ:UebtZRa9Y70C:
-    citations: 9
+    citations: 10
     title: 'From logs to causal inference: diagnosing large systems'
     year: '2024'
   M0EIKRoAAAAJ:W7OEmFMy1HYC:
@@ -110,7 +110,7 @@ papers:
     title: Federated learning clients clustering with adaptation to data drifts
     year: '2024'
   M0EIKRoAAAAJ:kNdYIx-mwKoC:
-    citations: 39
+    citations: 40
     title: 'Queueing, predictions, and large language models: Challenges and open problems'
     year: '2025'
   M0EIKRoAAAAJ:mVmsd5A6BfQC:
