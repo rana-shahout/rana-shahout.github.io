@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-28'
+  last_updated: '2026-09-02'
 papers:
   M0EIKRoAAAAJ:0EnyYjriUFMC:
     citations: 0
@@ -22,7 +22,7 @@ papers:
     title: Intra-request branch orchestration for efficient LLM reasoning
     year: '2025'
   M0EIKRoAAAAJ:5nxA0vEk-isC:
-    citations: 76
+    citations: 79
     title: 'Palimpzest: Optimizing AI-Powered Analytics with Declarative Query Processing.'
     year: '2025'
   M0EIKRoAAAAJ:9yKSN-GCB0IC:
@@ -50,7 +50,7 @@ papers:
     title: Fast inference for augmented large language models
     year: '2026'
   M0EIKRoAAAAJ:Tyk-4Ss8FVUC:
-    citations: 17
+    citations: 18
     title: 'Together is better: Heavy hitters quantile estimation'
     year: '2023'
   M0EIKRoAAAAJ:ULOm3_A8WrAC:
@@ -122,7 +122,7 @@ papers:
     title: Heavy hitters over interval queries
     year: '2018'
   M0EIKRoAAAAJ:roLk4NBRz8UC:
-    citations: 39
+    citations: 40
     title: "Don\u2019t stop me now: Embedding based scheduling for llms"
     year: '2025'
   M0EIKRoAAAAJ:u-x6o8ySG0sC:
