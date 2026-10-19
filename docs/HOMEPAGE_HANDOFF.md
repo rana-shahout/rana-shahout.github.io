@@ -70,20 +70,19 @@ website unchanged until the user approves deployment.
 
 The user approved and requested implementation of two research directions:
 co-designing AI applications and systems; and serving AI faster and more efficiently.
-Reasoning is part of resource allocation in the second direction. Model-informed
+Reasoning is part of resource allocation in the serving direction. Model-informed
 systems is a method, not a third research direction. The approved questions and
 paragraphs are preserved in `_pages/projects.md`. Project descriptions and groupings
 are in `_data/research.yml`, with paper links resolved from `publications.json`.
 
 The page uses `assets/css/research.css` to match the homepage. The old shared
-`research-site.css` is retained for the hidden publications page. One small HTML/CSS diagram
-illustrates application, data-processing, model-execution, storage, and runtime-state
-decisions, with CSS motion, a pause button,
-and reduced-motion support. Its controls are in `assets/js/research.js`.
+`research-site.css` is retained for the hidden publications page. The user subsequently
+requested removal of the illustration; its markup, CSS, script, and animation GIF
+have been removed.
 
 The new uploaded `assets/img/Rana_Shahout_013.JPG` is used on the homepage with a
 CSS crop. The original image is preserved. Blog and news content are unchanged.
-Updated review screenshots and an animation GIF are in `docs/design-preview/`.
+Updated review screenshots are in `docs/design-preview/`.
 Main and the live website still await deployment approval.
 
 ### Latest review revisions
@@ -91,8 +90,8 @@ Main and the live website still await deployment approval.
 Google Scholar, LinkedIn (`https://www.linkedin.com/in/rana-sh`), email, and GitHub
 are accessible inline SVG icon links on the homepage. Research no longer has
 Scholar/profile links. Source icon attribution is under `assets/icons/`.
-MARS appears in the first direction as well as scheduling/memory in the second.
-The first direction retains the approved opening and adds concrete explanation of
-cross-layer dependencies. Project descriptions now explain what is co-designed in
-Orla, Palimpzest, and MARS. The diagram is HTML/CSS so its text remains readable on
-mobile; it replaces the original generic three-layer SVG.
+MARS appears in the co-design direction as well as scheduling/memory in the serving direction.
+The co-design direction retains the approved opening and adds concrete explanation of
+cross-layer dependencies. Project descriptions explain what is co-designed in
+Orla, Palimpzest, and MARS. The latest requested order is serving first, co-design
+second, in both content and navigation. No illustration or animation remains.
