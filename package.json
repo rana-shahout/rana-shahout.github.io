@@ -4,7 +4,8 @@
     "lint:style-contract": "node test/style_contract.js",
     "test:visual": "playwright test --config test/visual/playwright.config.js",
     "test:visual:update": "playwright test --config test/visual/playwright.config.js --update-snapshots",
-    "test:site-theme": "node test/site_theme.cjs"
+    "test:site-theme": "node test/site_theme.cjs",
+    "test:contact": "node test/contact.cjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",

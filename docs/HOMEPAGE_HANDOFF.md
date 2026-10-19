@@ -109,3 +109,13 @@ and content grid. Stylesheet links use `bust_file_cache` to refresh cached asset
 Run `SITE_TEST_BROWSER=/usr/bin/chromium npm run test:site-theme` against a locally
 served production build after CSS purging to check saved theme preferences and
 black text across Home, Research, and Blog. `SITE_TEST_URL` selects another server.
+
+### Email contact behavior
+
+The email icon now opens a native details panel containing `ranas@mit.edu`, a mailto
+link, and a Copy address button. It does not require a configured local mail app to
+reveal the address. Clipboard denial selects the address for manual copying. The
+address is still available without JavaScript. Styles are in `home.css`; behavior
+is in `assets/js/contact.js`. Run `SITE_TEST_BROWSER=/usr/bin/chromium npm run
+test:contact` to check copying, fallback, keyboard dismissal, outside-click dismissal,
+mobile overflow, and the JavaScript-disabled case.
