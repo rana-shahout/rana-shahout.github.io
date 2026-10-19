@@ -9,7 +9,9 @@ description: Rana Shahout is a postdoctoral fellow at MIT CSAIL working on AI sy
 
 <div class="home-page">
   <aside class="home-profile" aria-labelledby="home-title">
-    <img class="home-photo" src="{{ '/assets/img/rana.jpg' | relative_url }}" alt="Rana Shahout" width="396" height="594" fetchpriority="high">
+    <div class="home-photo">
+      <img src="{{ '/assets/img/Rana_Shahout_013.JPG' | relative_url }}" alt="Rana Shahout" width="1280" height="1920" fetchpriority="high">
+    </div>
     <div class="home-profile-info">
       <h1 id="home-title">Rana Shahout</h1>
       <p class="home-affiliation">Postdoctoral Fellow · MIT CSAIL</p>
