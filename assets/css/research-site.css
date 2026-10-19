@@ -1,0 +1,64 @@
+/* Site-owned presentation; the al-folio runtime remains supplied by its gems. */
+:root {
+  --rs-bg: #f7f7f2;
+  --rs-ink: #202e2a;
+  --rs-muted: #56645f;
+  --rs-accent: #17664f;
+  --rs-line: #d9dfd7;
+  --rs-panel: #eaf0e8;
+  --global-bg-color: var(--rs-bg);
+  --global-text-color: var(--rs-ink);
+  --global-text-color-light: var(--rs-muted);
+  --global-theme-color: var(--rs-accent);
+  --global-divider-color: var(--rs-line);
+}
+
+html[data-theme="dark"] {
+  --rs-bg: #15221e;
+  --rs-ink: #edf2ea;
+  --rs-muted: #b4c2b9;
+  --rs-accent: #a0d7bb;
+  --rs-line: #374b40;
+  --rs-panel: #21372c;
+}
+
+body {
+  background: var(--rs-bg);
+  color: var(--rs-ink);
+}
+
+#navbar {
+  background: var(--rs-bg);
+  border-bottom: 1px solid var(--rs-line);
+  box-shadow: none;
+}
+
+#navbar .nav-link {
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+
+/* Keep the theme control legible without a third-party icon font. */
+#light-toggle i {
+  display: none !important;
+}
+
+#light-toggle::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--rs-ink);
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--rs-ink) 50%, transparent 50%);
+}
+
+body > .container[role="main"] {
+  margin-top: 2.5rem !important;
+}
+
+@media (max-width: 540px) {
+  body > .container[role="main"] {
+    margin-top: 1.5rem !important;
+  }
+}
