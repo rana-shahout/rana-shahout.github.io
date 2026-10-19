@@ -1,0 +1,12 @@
+# Add a new item with a date and Markdown text. Newest items appear first.
+# Month-only dates are intentional when the source gives no exact day.
+- date: "2026-10-02"
+  text: "New preprint: [Jumping the Line: Exploiting Length Predictions in LLM Scheduling](https://arxiv.org/abs/2610.03430)."
+- date: "2026-05"
+  text: "[Orla](https://orlaserver.github.io/#/), our library for serving LLM-based multi-agent systems, was accepted to CAIS 2026 and received Slingshot funding from the Laude Institute."
+- date: "2026-01"
+  text: "[FIELDING: Clustered Federated Learning with Data Drift](https://arxiv.org/abs/2411.01580) was accepted to AISTATS 2026."
+- date: "2025-09"
+  text: "[MARS: Fast Inference for Augmented Large Language Models](https://arxiv.org/abs/2410.18248) was accepted to NeurIPS 2025."
+- date: "2025-06"
+  text: "We presented a tutorial at SIGMETRICS 2025 on queueing systems, predictions, and LLM inference."

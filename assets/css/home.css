@@ -1,0 +1,219 @@
+/* Homepage typography and layout. Research and blog are revised separately. */
+:root {
+  --home-background: #fff;
+  --home-text: #242424;
+  --home-secondary: #626262;
+  --home-link: #315c9b;
+  --home-rule: #e5e5e5;
+  --global-bg-color: var(--home-background);
+  --global-text-color: var(--home-text);
+  --global-theme-color: var(--home-link);
+}
+
+html[data-theme="dark"] {
+  --home-background: #1b1b1b;
+  --home-text: #e7e7e7;
+  --home-secondary: #aaa;
+  --home-link: #a3bfe8;
+  --home-rule: #3b3b3b;
+}
+
+body {
+  color: var(--home-text);
+  background: var(--home-background);
+}
+
+body > .container[role="main"],
+#navbar > .container {
+  max-width: 940px;
+}
+
+#navbar {
+  background: var(--home-background);
+  border-bottom: none;
+  box-shadow: none;
+}
+
+#navbar .nav-link {
+  color: var(--home-secondary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#navbar .active > .nav-link {
+  color: var(--home-text);
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+#light-toggle i {
+  display: none !important;
+}
+
+#light-toggle::after {
+  content: "";
+  display: block;
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 1px solid var(--home-secondary);
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--home-secondary) 50%, transparent 50%);
+}
+
+.home-page {
+  padding: 3rem 0 4rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page p {
+  margin: 0;
+}
+
+.home-page h1 {
+  margin-bottom: 0.3rem;
+  font-family: inherit;
+  font-size: 2.45rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.home-page h2 {
+  margin-bottom: 1.4rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.home-introduction {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 185px;
+  align-items: start;
+  gap: 3rem;
+}
+
+.home-copy > p {
+  margin-top: 1.2rem;
+}
+
+.home-copy .home-affiliation {
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+  color: var(--home-secondary);
+  font-size: 0.95rem;
+}
+
+.home-photo {
+  display: block;
+  width: 185px;
+  height: 242px;
+  margin-top: 0.35rem;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 2px;
+}
+
+.home-page a {
+  color: var(--home-link);
+  text-decoration: none;
+}
+
+.home-page a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.home-page a:focus-visible {
+  outline: 2px solid var(--home-link);
+  outline-offset: 4px;
+}
+
+.home-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  font-size: 0.95rem;
+}
+
+.home-links span {
+  color: var(--home-secondary);
+}
+
+.home-news {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--home-rule);
+}
+
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.news-list time {
+  color: var(--home-secondary);
+  font-size: 0.95rem;
+}
+
+.news-list p {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .home-page {
+    padding-top: 1.5rem;
+  }
+
+  .home-introduction {
+    grid-template-columns: minmax(0, 1fr) 135px;
+    gap: 1.5rem;
+  }
+
+  .home-photo {
+    width: 135px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page {
+    padding-top: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .home-introduction {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .home-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-photo {
+    width: 140px;
+    height: 185px;
+    margin: 0;
+  }
+
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+    margin-bottom: 1.4rem;
+  }
+}
