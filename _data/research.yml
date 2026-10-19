@@ -1,0 +1,55 @@
+# Project descriptions for the Research page. Paper links come from publications.json.
+applications:
+  - title: Orla
+    paper_id: paper-1
+    description: Coordinate model calls, tools, and memory across the stages of an agentic workflow.
+    project_url: https://orlaserver.github.io/#/
+  - title: Palimpzest
+    paper_id: paper-16
+    description: Turn analytical tasks over unstructured data into execution plans that balance quality, runtime, and cost.
+    project_url: https://github.com/mitdbg/palimpzest
+
+serving:
+  - title: Scheduling and memory
+    projects:
+      - title: TRAIL
+        paper_id: paper-11
+        description: Predict remaining output length from internal model representations to guide memory-aware scheduling.
+      - title: MARS
+        paper_id: paper-5
+        description: Schedule tool-using LLM requests together with decisions about memory during tool calls.
+      - title: Prefix- and length-aware scheduling
+        paper_id: paper-14
+        description: Account for both shared prompt prefixes and predicted output lengths when distributing requests across GPUs.
+  - title: Routing and load balancing
+    projects:
+      - title: LASER
+        paper_id: paper-8
+        description: Use expert-routing scores to balance work among suitable experts without retraining the model.
+      - title: SCORE
+        paper_id: paper-15
+        description: Route requests across models using predicted quality and length, subject to cost and latency constraints.
+  - title: Reasoning and communication
+    projects:
+      - title: DUCHESS
+        paper_id: paper-9
+        description: Use internal model signals to decide when to extract an answer, branch out, or continue reasoning.
+      - title: Predictive Scheduling
+        paper_id: paper-6
+        description: Allocate a shared reasoning-token budget using predictions of question difficulty and expected benefit.
+      - title: SVR-MAD
+        paper_id: paper-2
+        description: Use evidence from agent debate to guide communication and reduce unnecessary exchanges.
+  - title: Power and energy
+    projects:
+      - title: PALS
+        paper_id: paper-3
+        description: Coordinate GPU power limits and batching to improve energy efficiency while meeting performance targets.
+
+foundations:
+  - title: SkipPredict
+    paper_id: paper-17
+  - title: Queueing, predictions, and LLMs
+    paper_id: paper-10
+  - title: Jumping the Line
+    paper_id: paper-0

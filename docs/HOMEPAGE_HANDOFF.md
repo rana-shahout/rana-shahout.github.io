@@ -65,3 +65,22 @@ The user authorized uploading screenshots to a separate GitHub review branch.
 `codex/website-design-preview` contains preview images and a README rendered by
 GitHub; update that branch with new screenshots for review. Keep main and the live
 website unchanged until the user approves deployment.
+
+## Research continuation — October 19, 2026
+
+The user approved and requested implementation of two research directions:
+co-designing AI applications and systems; and serving AI faster and more efficiently.
+Reasoning is part of resource allocation in the second direction. Model-informed
+systems is a method, not a third research direction. The approved questions and
+paragraphs are preserved in `_pages/projects.md`. Project descriptions and groupings
+are in `_data/research.yml`, with paper links resolved from `publications.json`.
+
+The page uses `assets/css/research.css` to match the homepage. The old shared
+`research-site.css` is retained for the hidden publications page. One small SVG
+illustrates application, serving, and data layers, with CSS motion, a pause button,
+and reduced-motion support. Its controls are in `assets/js/research.js`.
+
+The new uploaded `assets/img/Rana_Shahout_013.JPG` is used on the homepage with a
+CSS crop. The original image is preserved. Blog and news content are unchanged.
+Updated review screenshots and an animation GIF are in `docs/design-preview/`.
+Main and the live website still await deployment approval.
