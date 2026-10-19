@@ -7,9 +7,10 @@ The live site's main branch has not been changed.
 
 Work on the homepage first, then research and blog separately.
 Match https://www.sh-reya.com/ in font family, font size, styling, spacing,
-and picture placement. This exact match is still pending: the old running chat
-received proxy-policy HTTP 403 responses even after settings were published in
-another environment editor. Do not claim the current provisional font matches.
+and picture placement. The reference HTML and both stylesheets were accessible in the continuation
+environment. The homepage now uses its Inter/Lora font families, 15px body text,
+cream/brown palette, 240px sidebar, 64px gap, and 220px left-side photo.
+Fonts are bundled locally under `assets/fonts/home` with their licenses.
 
 Keep the paragraph beginning “I build systems that make AI faster, more efficient,
 and easier to run” and the short MIT/Harvard/Technion/Mellanox bio. Remove the
@@ -20,12 +21,12 @@ link to Rana's Google Scholar profile instead. Sketches are not active research.
 ## Current implementation
 
 - `_pages/about.md`: compact introduction, bio, links, and news.
-- `assets/css/home.css`: provisional serif typography and rectangular photo.
+- `assets/css/home.css`: reference typography, palette, responsive sidebar, and photo placement.
 - `_data/news.yml`: editable dated activity updates, newest first.
 - `_pages/blog.md`: navigation destination only; full blog is a later task.
 - `_pages/projects.md`: retained research page, with links redirected to Scholar.
 - `_config.yml`: hides the publications page and template examples.
-- `docs/design-preview/homepage.png` and `mobile.png`: current provisional previews.
+- `docs/design-preview/homepage.png` and `mobile.png`: updated desktop and mobile previews.
 
 The first research-page redesign and 35 verified Scholar records are also retained
 in source, but the user did not approve that initial design. Do not treat it as the
@@ -53,7 +54,9 @@ npm run lint:style-contract
 
 The baseurl is empty. No local development override is needed.
 Builds, formatting, news rendering, desktop/mobile layout, and navigation passed
-in the previous workspace. Exact reference typography remains unverified.
+in the previous workspace. The continuation verified both font files load, 15px body text, all five news
+entries, left-side desktop photo, centered mobile photo, and no horizontal overflow
+at 1440px, 820px, and 390px in Chromium.
 
 ## Delivering previews
 
