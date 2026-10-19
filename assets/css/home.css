@@ -103,7 +103,8 @@
   margin-top: 0.75rem;
 }
 
-.home-page .home-links a {
+.home-page .home-links > a,
+.home-email > summary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -120,7 +121,8 @@
   height: 1.25rem;
 }
 
-.home-page .home-links a:hover {
+.home-page .home-links > a:hover,
+.home-email > summary:hover {
   color: #6d4630;
   background: rgba(139, 90, 60, 0.08);
 }
@@ -191,5 +193,88 @@
 
   .home-profile-info {
     padding: 0;
+  }
+}
+
+.home-email {
+  position: relative;
+}
+
+.home-email > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.home-email > summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-email > summary:focus-visible {
+  outline: 2px solid var(--home-link);
+  outline-offset: 4px;
+}
+
+.email-panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 10;
+  width: 15rem;
+  max-width: calc(100vw - 3rem);
+  padding: 1rem;
+  border: 1px solid var(--home-rule);
+  border-radius: 6px;
+  background: var(--home-background);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.email-address {
+  display: block;
+  width: fit-content;
+  margin-bottom: 0.6rem;
+  user-select: all;
+}
+
+.copy-email {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--home-rule);
+  border-radius: 4px;
+  color: var(--home-text);
+  background: var(--home-background);
+  font: inherit;
+  cursor: pointer;
+}
+
+.copy-email:hover {
+  border-color: var(--home-link);
+}
+
+.copy-email:focus-visible {
+  outline: 2px solid var(--home-link);
+  outline-offset: 3px;
+}
+
+.email-status {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.email-status:empty {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .home-links {
+    position: relative;
+  }
+
+  .home-email {
+    position: static;
+  }
+
+  .email-panel {
+    width: min(15rem, 100%);
   }
 }
