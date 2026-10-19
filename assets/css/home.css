@@ -1,115 +1,4 @@
-/* Homepage only. Values follow sh-reya.com's Inter/Lora typography and sidebar. */
-@font-face {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("../fonts/home/inter-latin-wght-normal.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: Lora;
-  font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url("../fonts/home/lora-latin-wght-normal.woff2") format("woff2");
-}
-
-:root {
-  --home-background: #fdfcfa;
-  --home-text: #1a1a1a;
-  --home-secondary: #333;
-  --home-link: #8b5a3c;
-  --home-rule: rgba(44, 44, 44, 0.08);
-  --global-bg-color: var(--home-background);
-  --global-text-color: var(--home-text);
-  --global-theme-color: var(--home-link);
-}
-
-body {
-  color: var(--home-text);
-  background: var(--home-background);
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-
-body > .container[role="main"] {
-  width: 1080px;
-  max-width: calc(100% - 3rem);
-  padding: 3rem 1.5rem;
-}
-
-/* Match the layer of the starter's important mt-5 spacing utility. */
-@layer components {
-  body > .container[role="main"] {
-    margin-top: 0 !important;
-  }
-}
-
-#navbar > .container {
-  max-width: 1080px;
-  padding: 1rem 1.5rem;
-}
-
-body.fixed-top-nav {
-  padding-top: 0;
-}
-
-body > header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-#navbar {
-  position: relative;
-  padding: 0;
-  opacity: 1;
-  background: var(--home-background);
-  border-bottom: 1px solid var(--home-rule);
-  box-shadow: none;
-}
-
-#navbar .navbar-brand {
-  font-family: Lora, Georgia, serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--home-text);
-}
-
-#navbar .nav-link {
-  color: var(--home-secondary);
-  font-family: Inter, sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  padding: 0.5rem 0.875rem;
-  border-radius: 6px;
-}
-
-#navbar .active > .nav-link,
-#navbar .nav-link:hover {
-  color: var(--home-link);
-  background: rgba(139, 90, 60, 0.08);
-}
-
-#navbar .active > .nav-link {
-  text-decoration: underline;
-}
-
-/* The reference has a single warm, light palette. */
-#light-toggle {
-  display: none;
-}
-
+/* Homepage layout. Shared palette and typography are in site.css. */
 .home-page {
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
@@ -252,7 +141,7 @@ body > header {
 }
 
 .news-list time {
-  color: #555;
+  color: var(--home-text);
   font-size: 0.875rem;
 }
 
@@ -286,16 +175,6 @@ body > header {
 
   .home-profile-info {
     padding-top: 0.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  body > .container[role="main"] {
-    padding: 2rem 1rem;
-  }
-
-  #navbar > .container {
-    padding: 0.875rem 1rem;
   }
 }
 

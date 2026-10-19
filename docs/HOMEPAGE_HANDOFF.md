@@ -95,3 +95,17 @@ The co-design direction retains the approved opening and adds concrete explanati
 cross-layer dependencies. Project descriptions explain what is co-designed in
 Orla, Palimpzest, and MARS. The latest requested order is serving first, co-design
 second, in both content and navigation. No illustration or animation remains.
+
+### Published theme correction
+
+The approved revision was published to main and GitHub Pages. A subsequent review
+found that saved/system dark preferences left light text on the homepage’s light
+background, and Blog still used the original page styling. All three public tabs
+now load `assets/css/site.css` for shared typography, black text, light palette,
+and navigation. `enable_darkmode` is disabled. Page-specific styles remain in
+`home.css` and `research.css`; Blog uses the default layout with a matching title
+and content grid. Stylesheet links use `bust_file_cache` to refresh cached assets.
+
+Run `SITE_TEST_BROWSER=/usr/bin/chromium npm run test:site-theme` against a locally
+served production build after CSS purging to check saved theme preferences and
+black text across Home, Research, and Blog. `SITE_TEST_URL` selects another server.

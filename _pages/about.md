@@ -5,7 +5,8 @@ permalink: /
 description: Rana Shahout is a postdoctoral fellow at MIT CSAIL working on AI systems, LLM serving, and multi-agent infrastructure.
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url | bust_file_cache }}">
+<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url | bust_file_cache }}">
 
 <div class="home-page">
   <aside class="home-profile" aria-labelledby="home-title">
