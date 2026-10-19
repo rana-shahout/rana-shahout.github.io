@@ -209,13 +209,31 @@ body > header {
 .home-links {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.25rem 0.85rem;
-  margin-top: 0.35rem !important;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
 }
 
-.home-links span {
-  display: none;
+.home-page .home-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 4px;
+  color: var(--home-link);
+}
+
+.home-links svg {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.home-page .home-links a:hover {
+  color: #6d4630;
+  background: rgba(139, 90, 60, 0.08);
 }
 
 .home-news {

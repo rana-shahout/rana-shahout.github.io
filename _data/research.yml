@@ -2,12 +2,15 @@
 applications:
   - title: Orla
     paper_id: paper-1
-    description: Coordinate model calls, tools, and memory across the stages of an agentic workflow.
+    description: An agentic workflow spans model calls, tools, and shared context. Orla separates workflow policy from request execution, coordinating model and backend assignment, stage scheduling, and context reuse across the workflow.
     project_url: https://orlaserver.github.io/#/
   - title: Palimpzest
     paper_id: paper-16
-    description: Turn analytical tasks over unstructured data into execution plans that balance quality, runtime, and cost.
+    description: An analytical task can have many implementations. Palimpzest reorders data operations and chooses models, prompts, or generated code for each operation, using estimates of runtime, cost, and output quality to select an execution plan.
     project_url: https://github.com/mitdbg/palimpzest
+  - title: MARS
+    paper_id: paper-5
+    description: A tool call can leave a request waiting while its context occupies GPU memory. MARS plans request scheduling together with whether to retain, offload, or recompute that context, accounting for memory use over the request’s execution.
 
 serving:
   - title: Scheduling and memory

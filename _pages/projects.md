@@ -16,7 +16,6 @@ nav_order: 1
       <a href="#co-design">Co-designing AI applications and systems</a>
       <a href="#serving">Serving AI faster and more efficiently</a>
     </nav>
-    <a class="scholar-link" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">Google Scholar</a>
   </aside>
 
   <div class="research-content">
@@ -24,44 +23,50 @@ nav_order: 1
       <h2 id="co-design-title">Co-designing AI applications and systems</h2>
       <p class="research-question">How can application structure and goals inform the design of the systems that execute them?</p>
       <p>I study how to design the AI stack as a whole, bringing together application logic, models, serving systems, storage, and databases. Treating an LLM as an API call hides opportunities to optimize across these layers. By co-designing them, we can make decisions about data access, computation, and execution together.</p>
+      <p class="stack-explanation">These layers make coupled decisions. A database or query engine determines which data reaches a model. A workflow determines which calls can run in parallel and which share context. The serving system determines how long that context occupies GPU memory. Optimizing each layer independently can save work in one place while creating data movement, recomputation, or waiting elsewhere.</p>
+      <p class="stack-explanation">I work on abstractions and execution policies that make these dependencies visible across layers. This lets us consider operator order, model choice, data access, context reuse, and scheduling together, with application quality, latency, and cost as shared constraints.</p>
 
       <figure class="stack-illustration">
-        <svg viewBox="0 0 640 294" role="img" aria-labelledby="stack-title stack-description">
-          <title id="stack-title">Co-design across the AI stack</title>
-          <desc id="stack-description">Application logic and goals, model serving, and storage and databases are connected in both directions. Moving dots show information passing between the layers.</desc>
-          <defs>
-            <marker id="stack-arrow" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 1 1 L 6 4 L 1 7" fill="none" stroke="currentColor" stroke-width="1.2" />
-            </marker>
-          </defs>
-          <g class="stack-connections" fill="none" marker-end="url(#stack-arrow)">
-            <path d="M 306 72 V 116" />
-            <path d="M 334 120 V 76" />
-            <path d="M 306 176 V 220" />
-            <path d="M 334 224 V 180" />
-          </g>
-          <g class="stack-layer">
-            <rect x="1" y="16" width="638" height="56" rx="6" />
-            <rect x="1" y="120" width="638" height="56" rx="6" />
-            <rect x="1" y="224" width="638" height="56" rx="6" />
-          </g>
-          <g class="stack-labels">
-            <text x="22" y="49">Application</text>
-            <text x="22" y="153">Serving</text>
-            <text x="22" y="257">Data</text>
-          </g>
-          <g class="stack-details">
-            <text x="210" y="49">Workflow · goals · quality</text>
-            <text x="210" y="153">Models · scheduling · memory</text>
-            <text x="210" y="257">Storage · databases</text>
-          </g>
-          <g class="stack-flow" aria-hidden="true">
-            <circle class="flow-down" cx="306" cy="78" r="3" />
-            <circle class="flow-up" cx="334" cy="218" r="3" />
-          </g>
-        </svg>
+        <div class="stack-diagram" role="img" aria-labelledby="stack-title stack-description">
+          <span class="sr-only" id="stack-title">Decisions across the AI stack</span>
+          <span class="sr-only" id="stack-description">Application dependencies and quality, latency, and cost constraints guide both data processing and model execution. Data processing determines which records and context reach model calls. Storage access and reuse support data processing; context retention, offloading, and recomputation support model execution. These decisions must be coordinated.</span>
+          <div class="stack-node stack-application" aria-hidden="true">
+            <strong>Application and query</strong>
+            <span>Dependencies · quality · latency · cost</span>
+          </div>
+          <div class="stack-branches" aria-hidden="true">
+            <span class="stack-branch"><span class="flow-down"></span></span>
+            <span class="stack-branch"><span class="flow-up"></span></span>
+          </div>
+          <div class="stack-row stack-execution" aria-hidden="true">
+            <div class="stack-node">
+              <strong>Data processing</strong>
+              <span>Filter and retrieve data<br>Order operators</span>
+            </div>
+            <span class="stack-crosslink"></span>
+            <div class="stack-node">
+              <strong>Model execution</strong>
+              <span>Select models<br>Schedule and batch calls</span>
+            </div>
+          </div>
+          <div class="stack-branches stack-lower-branches" aria-hidden="true">
+            <span class="stack-branch"></span>
+            <span class="stack-branch"></span>
+          </div>
+          <div class="stack-row" aria-hidden="true">
+            <div class="stack-node">
+              <strong>Storage and databases</strong>
+              <span>Access and place data<br>Reuse intermediate results</span>
+            </div>
+            <span></span>
+            <div class="stack-node">
+              <strong>Runtime state</strong>
+              <span>Retain, offload, or<br>recompute context</span>
+            </div>
+          </div>
+        </div>
         <figcaption>
-          <span>Design decisions span the application, serving, and data layers.</span>
+          <span>Operator order changes model calls; tool waits change memory decisions.</span>
           <button class="animation-toggle" type="button" aria-pressed="false" hidden>Pause animation</button>
         </figcaption>
       </figure>
@@ -72,7 +77,8 @@ nav_order: 1
           {% for project in site.data.research.applications %}
           {% assign paper = site.data.publications | where: "id", project.paper_id | first %}
           <li>
-            <h4><a href="{{ project.project_url | escape }}">{{ project.title | escape }}</a></h4>
+            {% assign project_link = project.project_url | default: paper.url %}
+            <h4><a href="{{ project_link | escape }}">{{ project.title | escape }}</a></h4>
             <p>{{ project.description | escape }}</p>
             <a class="paper-link" href="{{ paper.url | escape }}">Paper<span class="sr-only">: {{ paper.title | escape }}</span></a>
           </li>
@@ -116,8 +122,6 @@ nav_order: 1
         <a href="{{ paper.url | escape }}">{{ project.title | escape }}</a>{% unless forloop.last %}; {% endunless %}{% endfor %}.
       </p>
     </section>
-
-    <p class="research-publications">For the full publication list, see <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">Google Scholar</a>.</p>
 
   </div>
 </div>
